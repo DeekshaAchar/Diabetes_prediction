@@ -1,0 +1,43 @@
+
+{% load static %}
+<html>
+    <head>
+        <title>
+            Health information
+        </title>
+        <link href="{% static 'bootstrap.min.css'%}"
+        type="text/css" rel="stylesheet"/>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-6  bg-primary">
+                    <h1>Home Page</h1>
+                    <form action="/CheckDisease/" method="post">
+                        {% csrf_token %}
+                        <input type="text" id="Pregnancies" class="form-group form-control" placeholder="Pregnancies" name="Pregnancies"/><br>
+                        
+                        <input type="text" id="Glucose" class="form-group form-control" placeholder="Glucose"  name="Glucose"/><br>
+                        
+                        <input type="BloodPressure" id="BloodPressure" class="form-group form-control" placeholder="BloodPressure" name="BloodPressure"/><br>
+                        
+                        <input type="SkinThickness" id="SkinThickness" class="form-group form-control" placeholder="SkinThickness" name="SkinThickness"/><br>
+                        
+                        <input type="Insulin" id="Insulin" class="form-group form-control" placeholder="Insulin" name="Insulin"/><br>
+                        
+                        <input type="BMI" id="BMI" class="form-group form-control" placeholder="BMI" name="BMI"/><br>
+                        <input type="text" id="DiabetesPedigreeFunction" class="form-group form-control" placeholder="DiabetesPedigreeFunction" name="DiabetesPedigreeFunction"/><br>
+                        
+                        <input type="Age" id="Age" class="form-group form-control" placeholder="Age" name="Age"/><br>
+                        <button class="btn btn-primary" type="submit">
+                            Check Disease
+                        </button>
+                    </form>
+                </div>
+                <div class="col-3"></div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+
+{% load static %}
+<html>
+    <head>
+        <title>
+            Login
+        </title>
+        <link href="{% static 'bootstrap.min.css'%}"
+        type="text/css" rel="stylesheet"/>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <h1>LoginPage</h1>
+                    
+                    <form method="post" action="/verifylogin/">
+                        {% csrf_token %}
+                        <input type="text" id="username" class="form-group form-control" placeholder="username" name="username"/>
+                        <input type="password" id="password" class="form-group form-control" placeholder="password" name="password"/>
+                        <button class="btn btn-primary form-control form-group" type="submit">
+                            Login
+                        </button>
+                        <a href="/registration/" class="btn btn-primary form-control">Sign up</a>
+                    </form>
+                </div>
+                <div class="col-4"></div>
+            </div>
+        </div>
+    </body>
+</html>

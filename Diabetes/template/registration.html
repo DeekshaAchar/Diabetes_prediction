@@ -1,0 +1,37 @@
+
+{% load static %}
+<html>
+    <head>
+        <title>
+            Login
+        </title>
+        <link href="{% static 'bootstrap.min.css'%}"
+        type="text/css" rel="stylesheet"/>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4"></div>
+                <div class="col-4 bg-secondary">
+                    <h1>RegistrationPage</h1>
+                    
+                    <form action="/saveuser/" method="post">
+                        {% csrf_token %}
+                        <input type="text" id="name" class="form-group form-control "  placeholder="name"  name="name" /><br>
+                        <input type="text" id="number" class="form-group form-control" placeholder="Contact Number"  name="Contact Number"/><br>
+                        <input type="text" id="contact" class="form-group form-control" placeholder="Email" name="Email"/><br>
+                        <input type="text" id="address" class="form-group form-control" placeholder="Address" name="Address"/><br>
+                        <input type="text" id="username" class="form-group form-control" placeholder="username" name="username"/><br>
+                        <input type="text" id="password" class="form-group form-control" placeholder="password" name="password"/><br>
+                        <button class="btn btn-primary form-control" type="submit">
+                            Register
+                        </button>
+                       
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
